@@ -29,7 +29,7 @@ func InsertOneDoc(db string, collection string, doc interface{}) (insertedID int
 	return insertResult.InsertedID
 }
 
-func InsertMakanan(db *mongo.Database, col string, hewan model.Hewan, jenismakanan string, bahan string, berat string, rasa string,merk string, harga string) (insertedID primitive.ObjectID, err error) {
+func InsertMakanan(db *mongo.Database, col string, hewan model.Hewan, jenismakanan string, bahan string, berat string, rasa string, merk string, harga string) (insertedID primitive.ObjectID, err error) {
 	makanan := bson.M{
 		"hewan":    hewan,
 		"jenismakanan":     jenismakanan,
